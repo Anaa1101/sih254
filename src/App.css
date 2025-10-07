@@ -1,0 +1,122 @@
+/* App.css - Main application styles */
+
+.app {
+  min-height: 100vh;
+  background-color: var(--bg-light);
+  transition: background-color var(--transition-normal);
+}
+
+.app.dark {
+  background-color: var(--bg-dark);
+}
+
+/* Global utility classes for the app */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.app-header {
+  background-color: var(--bg-white);
+  box-shadow: var(--card-shadow);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  transition: all var(--transition-normal);
+}
+
+.app-header.dark {
+  background-color: var(--bg-dark-card);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.app-main {
+  min-height: calc(100vh - 80px);
+  padding: var(--spacing-lg) 0;
+}
+
+.app-footer {
+  background-color: var(--bg-white);
+  border-top: 1px solid var(--bg-gray);
+  padding: var(--spacing-xl) 0;
+  margin-top: auto;
+  transition: all var(--transition-normal);
+}
+
+.app-footer.dark {
+  background-color: var(--bg-dark-card);
+  border-top-color: var(--bg-gray-dark);
+}
+
+/* Loading states */
+.app-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-light);
+}
+
+.app-loading.dark {
+  background-color: var(--bg-dark);
+}
+
+/* Error states */
+.app-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.app-error h2 {
+  color: var(--error-text);
+  margin-bottom: var(--spacing-md);
+}
+
+.app-error p {
+  color: var(--text-gray);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .app-main {
+    padding: var(--spacing-md) 0;
+  }
+  
+  .app-footer {
+    padding: var(--spacing-lg) 0;
+  }
+}
+
+/* Animation for page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
