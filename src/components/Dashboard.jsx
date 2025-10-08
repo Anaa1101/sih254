@@ -136,14 +136,17 @@ const Dashboard = () => {
           <div className="search-container">
             <form onSubmit={handleSearch} className="search-form">
               <div className="search-wrapper">
-                <Search className="search-icon" />
-                <input
-                  type="text"
-                  placeholder="Search policies, documents, or keywords..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="search-input"
-                />
+              <div className="search-bar">
+  <Search className="search-icon" />
+  <input
+    type="text"
+    placeholder="Search policies, documents, or keywords..."
+    value={searchQuery}
+    onChange={(e) => setSearchQuery(e.target.value)}
+    className="search-input"
+  />
+</div>
+
                 <button type="submit" className="search-button">
                   Search
                 </button>

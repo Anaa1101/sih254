@@ -56,7 +56,7 @@ const Login = () => {
           <div className="login-header">
             <div className="login-logo">
               <Shield className="logo-icon" />
-              <h1>Government Portal</h1>
+              <h1>DataSutra</h1>
             </div>
             <p className="login-subtitle">
               Policy Search & Analysis Platform

@@ -130,6 +130,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between; /* ⬅️ Added this */
   background-color: var(--bg-white);
   border: 2px solid var(--bg-gray);
   border-radius: var(--radius-xl);
@@ -147,12 +148,13 @@
 .search-bar {
   display: flex;
   align-items: center;
-  gap: 10px; /* space between icon and input */
+  gap: 10px;
   padding: 5px 10px;
   border: 1px solid var(--text-gray);
   border-radius: var(--radius-md);
   background-color: var(--bg-light);
-  width: 300px; /* adjust as needed */
+  flex: 1; /* ⬅️ Added this to make search bar take available space */
+  max-width: 100%; /* ⬅️ Added this */
 }
 
 .search-icon {
@@ -170,13 +172,12 @@
   font-size: 1.1rem;
   background: transparent;
   color: var(--text-dark);
-  margin-left:30px;
+  margin-left: 30px;
 }
 
 .search-input::placeholder {
   color: var(--text-gray);
 }
-
 
 .search-button {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
@@ -189,6 +190,7 @@
   cursor: pointer;
   transition: all var(--transition-fast);
   white-space: nowrap;
+  flex-shrink: 0; /* ⬅️ Added this to prevent button from shrinking */
 }
 
 .search-button:hover {

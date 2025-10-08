@@ -188,6 +188,39 @@ const Document = () => {
                 <h2>Policy Overview</h2>
                 <p className="document-summary">{policy.summary}</p>
                 
+                <div className="document-citations">
+                  <h2>Citations & References</h2>
+                  <div className="citations-list">
+                    <div className="citation-item">
+                      <span className="citation-number">[1]</span>
+                      <div className="citation-content">
+                        <p className="citation-text">
+                          Official Government Gazette, {policy.source}, Published {formatDate(policy.date)}
+                        </p>
+                        <a href="#" className="citation-link">View Source →</a>
+                      </div>
+                    </div>
+                    <div className="citation-item">
+                      <span className="citation-number">[2]</span>
+                      <div className="citation-content">
+                        <p className="citation-text">
+                          Ministry Archive Reference: GOI/{policy.category.toUpperCase()}/{new Date(policy.date).getFullYear()}/{policy.id.toString().padStart(4, '0')}
+                        </p>
+                        <a href="#" className="citation-link">View Archive →</a>
+                      </div>
+                    </div>
+                    <div className="citation-item">
+                      <span className="citation-number">[3]</span>
+                      <div className="citation-content">
+                        <p className="citation-text">
+                          Related Legislative Framework: {policy.category} Act, {new Date(policy.date).getFullYear()}
+                        </p>
+                        <a href="#" className="citation-link">View Legislation →</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <h2>Full Policy Text</h2>
                 <div className="document-full-text">
                   {highlightKeywords(policy.fullText)}

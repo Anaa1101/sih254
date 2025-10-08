@@ -261,7 +261,7 @@ const Header = () => {
             }}
           >
             <Shield style={brandIconStyle} className="brand-icon" />
-            <span style={brandTextStyle} className="brand-text">GovPortal</span>
+            <span style={brandTextStyle} className="brand-text"> DataSutra</span>
           </button>
         </div>
 
