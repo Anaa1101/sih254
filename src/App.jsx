@@ -8,6 +8,7 @@ import Dashboard from './components/Dashboard';
 import Results from './components/Results';
 import Document from './components/Document';
 import Trends from './components/Trends';
+import DocTrends from './components/doc_trends';
 
 // Create context for global state
 const AppContext = createContext();
@@ -68,6 +69,12 @@ function App() {
               path="/document/:id" 
               element={
                 user ? <Document /> : <Navigate to="/login" replace />
+              } 
+            />
+            <Route 
+              path="/document/:id/trends" 
+              element={
+                user ? <DocTrends /> : <Navigate to="/login" replace />
               } 
             />
             <Route 

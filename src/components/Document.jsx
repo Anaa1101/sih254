@@ -7,7 +7,7 @@ import {
   Download, 
   Share2, 
   Bookmark, 
-  
+  BarChart3,
   ArrowLeft,
   FileText,
   Bot,
@@ -175,12 +175,19 @@ const Document = () => {
                   <span>Share</span>
                 </button>
                 <button 
-  className={`action-button bookmark-button ${isBookmarked ? 'bookmarked' : ''}`}
-  onClick={toggleBookmark}
->
-  <Bookmark className={`action-icon ${isBookmarked ? 'filled' : ''}`} />
-  <span>{isBookmarked ? 'Bookmarked' : 'Bookmark'}</span>
-</button>
+                  className={`action-button bookmark-button ${isBookmarked ? 'bookmarked' : ''}`}
+                  onClick={toggleBookmark}
+                >
+                  <Bookmark className={`action-icon ${isBookmarked ? 'filled' : ''}`} />
+                  <span>{isBookmarked ? 'Bookmarked' : 'Bookmark'}</span>
+                </button>
+                <button 
+                  className="action-button analysis-button"
+                  onClick={() => navigate(`/document/${id}/trends`)}
+                >
+                  <BarChart3 className="action-icon" />
+                  <span>View Analysis</span>
+                </button>
               </div>
 
               {/* Document Content */}

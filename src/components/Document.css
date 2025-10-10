@@ -312,6 +312,14 @@
     box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
   }
   
+  /* 📊 Analysis Button */
+  .analysis-button:hover {
+    background-color: white;
+    border-color: #7c3aed;
+    color: #7c3aed;
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.15);
+  }
+  
 
 /* Document Text */
 .document-text {
@@ -713,6 +721,11 @@
   color: #f9fafb;
 }
 [data-theme="dark"] .bookmark-button {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #f9fafb;
+}
+[data-theme="dark"] .analysis-button {
   background-color: #374151;
   border-color: #4b5563;
   color: #f9fafb;
